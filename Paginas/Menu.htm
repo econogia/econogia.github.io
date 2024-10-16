@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Menu</title>
+<style>
+<!--
+#foldheader{cursor:pointer;cursor:hand ;
+list-style-image:url(Imagenes/fold.gif)}
+#foldinglist{list-style-image:url(Imagenes/list.gif)}
+//.style1 {color: #C5F2FA}
+
+-->
+</style>
+<script language="JavaScript1.2">
+<!--
+
+//Smart Folding Menu tree- By Dynamic Drive (rewritten 03/03/02)
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var head="display:''"
+img1=new Image()
+img1.src="Imagenes/fold.gif"
+img2=new Image()
+img2.src="Imagenes/fold.gif"
+
+var ns6=document.getElementById&&!document.all
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+
+function checkcontained(e){
+var iscontained=0
+cur=ns6? e.target : event.srcElement
+i=0
+if (cur.id=="foldheader")
+iscontained=1
+else
+while (ns6&&cur.parentNode||(ie4&&cur.parentElement)){
+if (cur.id=="foldheader"||cur.id=="foldinglist"){
+iscontained=(cur.id=="foldheader")? 1 : 0
+break
+}
+cur=ns6? cur.parentNode : cur.parentElement
+}
+
+if (iscontained){
+var foldercontent=ns6? cur.nextSibling.nextSibling : cur.all.tags("UL")[0]
+if (foldercontent.style.display=="none"){
+foldercontent.style.display=""
+cur.style.listStyleImage="url(Imagenes/open.gif)"
+}
+else{
+foldercontent.style.display="none"
+cur.style.listStyleImage="url(Imagenes/fold.gif)"
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=checkcontained
+
+//-->
+</script>
+</head>
+
+<body background="Imagenes/FondoMenu.jpg">
+<span class="style1"></span><br />
+<font face="Arial Narrow" size="2">
+<ul>
+   <li id="foldheader"><Strong>JÓVENES EMPRENDEDORES</Strong></li>
+   <ul id="foldinglist" style="display:none" style=&{head};>
+      <li><a target="principal" href="ServiciosJovenesEmprendedores.HTM"> Servicio</a></li>
+      <li><a target="principal" href="descripcion_evento_actual.info"> Descripción del evento actual</a></li>
+      <li><a target="principal" href="">Blackboard</a></li>
+      <li><a target="principal" href="JovenCalendario.HTM"> Calendario</a></li>
+      <li><a target="principal" href="">Eventos realizados</a></li>   </ul>
+
+   <li id="foldheader"><Strong>REVISTAS PYMES EL BUEN EMPRENDEDOR</Strong></li>
+   <ul id="foldinglist" style="display:none" style=&{head};>
+      <li><a target="principal" href="RevistaPYMESDescripcion.htm">Descripción de la actividad de la revista</a></li>
+      <li><a target="principal" href="RevistaPYMESHistoria.htm">Historia</a></li>
+      <li><a target="principal" href="RevistaPYMESPublicite.htm">Publicidad</a></li>
+   </ul>
+
+   <li id="foldheader"><Strong>INTELIGENCIA PYMES</Strong></li>
+   <ul id="foldinglist" style="display:none" style=&{head};>
+      <li><a target="principal" href="InteligenciaPYMES.htm">Servicio</a></li>
+   </ul>
+
+</ul>
+
+</font>
+</body>
+</html>

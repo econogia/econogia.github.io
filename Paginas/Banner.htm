@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+
+.initial2{font-weight:bold;background-color:#E9B065}
+
+</style>
+
+<script type="text/javascript">
+<!--
+
+/***********************************************
+* Rollover background-color button Script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Specify optional button target: "_new" for new window, or name of FRAME target (ie "myframe")
+var buttontarget="principal"
+
+function change(e, color){
+var el=window.event? event.srcElement: e.target
+if (el.tagName=="INPUT"&&el.type=="button")
+el.style.backgroundColor=color
+}
+
+function jumpto2(url){
+if (buttontarget=="")
+window.location=url
+else if (buttontarget=="_new")
+window.open(url)
+else
+parent[buttontarget].location=url
+}
+
+//-->
+</script>
+</head>
+
+<body background="Imagenes/FondoBanner.jpg">
+<table width="auto" border="0" align="left">
+  <tr>
+    <td width="17%" rowspan="2" align="center" valign="middle" ><img src="Imagenes/LogoEconogia.gif" width="104" height="111"></td>
+    <td width="63%" height="60%" align="left" valign="middle"><img src="Imagenes/EconogiaTexto.GIF" width="428" height="88"></td>
+    <td width="20%" rowspan="2" align="center" valign="middle" >&nbsp;</td>
+    <td width="141" rowspan="2" align="center" valign="middle" bgcolor="#FFFFFF" ><p><a href="http://www.gmsantacruz.gov.bo/" target="_blank"><img src="Imagenes/AlcaldiaSCZ.JPG" border="0" ></a><br>
+        <br>
+          <a href="http://www.aerosur.com/" target="_blank"><img src="Imagenes/Aerosur.JPG" border="0" ></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td height="26" align="left" bordercolor="#C5F2FA"><form onMouseover="change(event, '#F7E69F')" onMouseout="change(event, '#E9B065')">
+      <input type="button" value="Home" class="initial2" onClick="jumpto2('Home.htm')"> 
+<input type="button" value="Nosotros" class="initial2" onClick="jumpto2('AcercaDeNosotros.htm')"> 
+<input type="button" value="Misión" class="initial2" onClick="jumpto2('Mision.htm')">
+<input type="button" value="Visión" class="initial2" onClick="jumpto2('Vision.htm')">
+<input type="button" value="Contacto" class="initial2" onClick="jumpto2('Contactos.htm')">
+    </form>  
+    </tr>
+</table>
+</body>
+</html>
